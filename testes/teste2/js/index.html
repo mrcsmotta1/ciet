@@ -1,0 +1,32 @@
+<p id="demo" onclick="foiMordido(text)">O que Joãozinho fez?</p>
+
+<p id="text"></p>
+
+<script>
+function foiMordido(){
+    var randomMordido = Math.random() >= 0.5;
+	var texto = '';
+	if(randomMordido == true){
+		texto = "Joãozinho mordeu o seu dedo !";
+		document.getElementById("text").className = "red";
+	}else{
+		texto = "Joãozinho NÃO mordeu o seu dedo !";
+		 document.getElementById('text').classList.remove('red');
+	}
+	
+	 return document.getElementById("text").innerHTML = texto;
+}
+</script>
+
+
+<style>
+    #demo {
+        cursor: pointer;
+    }
+	
+	.red{
+		color: red;
+	}
+</style>
+
+
